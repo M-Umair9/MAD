@@ -43,7 +43,6 @@ class _DiceScreenState extends State<DiceScreen> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -60,34 +59,6 @@ class _DiceScreenState extends State<DiceScreen> {
               ElevatedButton(
                 child: Text('3 Dice'),
                 onPressed: () => _setNumDice(3),
-              ),
-              TextButton(
-                child: Text('Custom'),
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return AlertDialog(
-                        title: Text('Number of Dice'),
-                        content: TextField(
-                          keyboardType: TextInputType.number,
-                          onChanged: (value) {
-                            _numDice = int.tryParse(value) ?? 2;
-                          },
-                        ),
-                        actions: [
-                          TextButton(
-                            child: Text('Ok'),
-                            onPressed: () {
-                              _setNumDice(_numDice);
-                              Navigator.of(context).pop();
-                            },
-                          ),
-                        ],
-                      );
-                    },
-                  );
-                },
               ),
             ],
           ),

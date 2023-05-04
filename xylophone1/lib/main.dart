@@ -29,11 +29,13 @@ class Xylo extends StatefulWidget {
 }
 
 class _XyloState extends State<Xylo> {
-  void PlaySound(int num){ AssetsAudioPlayer.newPlayer().open(
-    Audio("assets/assets_note$num.wav"),
-  );
+  void PlaySound(int num) {
+    AssetsAudioPlayer.newPlayer().open(
+      Audio("assets/assets_note$num.wav"),
+    );
   }
-  CreateNewButton(int sound, Color color)
+
+
 
   @override
   Widget build(BuildContext context) {
